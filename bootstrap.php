@@ -14,7 +14,6 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
 //$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), $isDevMode);
 
 // database configuration parameters
-$conn = $config;
 
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
