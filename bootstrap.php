@@ -3,6 +3,7 @@
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
+require_once 'config.php';
 require_once "vendor/autoload.php";
 
 // Create a simple "default" Doctrine ORM configuration for Annotations
@@ -13,15 +14,7 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
 //$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), $isDevMode);
 
 // database configuration parameters
-$conn = array(
-    'dbname' => 'riego',
-    'user' => 'riega',
-    'password' => 'mm1144&ppP?',
-    'host' => 'localhost',
-    'driver' => 'pdo_mysql',
-    // 'driver' => 'pdo_sqlite',
-    // 'path' => __DIR__ . '/db.sqlite',
-);
+$conn = $config;
 
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
