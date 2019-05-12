@@ -1,0 +1,6 @@
+base_path: /
+
+routes:
+  index: [/, apiRoutes.index, GET]
+  api: [/api, apiRoutes.api, GET]
+  riegos: [/api/riegos, apiRoutes.volumen, GET]

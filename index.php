@@ -1,16 +1,12 @@
 <?php
-  use Phroute\Phroute\RouteCollector;
+  require __DIR__.'/vendor/autoload.php';
+  require_once 'apiRoutes.php';
 
-  $router = new RouteCollector();
+  use PHPRouter\RouteCollection;
+  use PHPRouter\Config;
+  use PHPRouter\Router;
+  use PHPRouter\Route;
   
-  $router->get('/api/riegos', function(){
-    return '<joson>Alovaro is ok</joson>';
-  });
-  
-  $router->post('/example/{id}', function($id){
-    return 'This route responds to requests with the POST method at the path /example/1234. It passes in the parameter as a function argument.';
-  });
-  
-  $router->any('/example', function(){
-    return 'This route responds to any method (POST, GET, DELETE, OPTIONS, HEAD etc...) at the path /example';
-  });
+  $config = Config::loadFromFile(__DIR__.'/routes.yaml');
+  $router = Router::parseConfig($config);
+  $router->matchCurrentRequest();
