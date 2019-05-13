@@ -12,6 +12,10 @@
         ->setTimezone('Europe/Madrid');
     }
     function index() {
+      echo "<pre>";
+      print_r($_SERVER);
+      print_r( apache_request_headers() );
+
       $template = $this->TWIG->load('api.html');
       echo $template->render(
         ['title' => 'Riego application server',
@@ -24,7 +28,7 @@
       $template = $this->TWIG->load('volumen.json');
       header('Content-Type: application/json');
       echo $template->render([
-        "volumen"=>100
+        "volumen" => 100
       ]);
     }
 

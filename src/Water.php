@@ -36,8 +36,8 @@ class Water
         return $this->riego;
     }
 
-    public function setRiego($riefo)
+    public function setRiego($riego)
     {
-        $this->riefo = $riefo;
+        $this->riego = $riego;
     }
 }

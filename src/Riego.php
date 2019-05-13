@@ -12,8 +12,6 @@ class Riego
     protected $date;
     /** @ORM\Column(type="string") **/
     protected $duration;
-    /** @ORM\Column(type="string") **/
-    protected $volumen;
 
      public function getId()
     {
@@ -27,7 +25,7 @@ class Riego
     
     public function setDate($date)
     {
-        $this->name = new DateTime();
+        $this->date = $date;
     }
 
     public function getDuration()
@@ -36,15 +34,7 @@ class Riego
     }
     public function setDuration($duration)
     {
-        $this->name = $duration;
+        $this->duration = $duration;
     }
 
-    public function getVolumen()
-    {
-        return $this->volumen;
-    }
-    public function setVolumen($volumen)
-    {
-        $this->name = $volumen;
-    }
 }
