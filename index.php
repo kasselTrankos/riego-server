@@ -1,6 +1,6 @@
 <?php
   require __DIR__.'/vendor/autoload.php';
-  require_once 'apiRoutes.php';
+  require_once __DIR__.'/routes/Api.php';
 
   use PHPRouter\RouteCollection;
   use PHPRouter\Config;
