@@ -1,4 +1,5 @@
 <?php
+namespace Terraza\Entity;
 use Doctrine\ORM\Mapping as ORM;
 // src/Product.php
 /**

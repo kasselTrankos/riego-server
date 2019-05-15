@@ -1,4 +1,7 @@
 <?php
+
+namespace Terraza\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 // src/Riego.php
 /**
@@ -36,5 +39,5 @@ class Riego
     {
         $this->duration = $duration;
     }
-
 }
+// class_alias('Terraza', 'Terraza_Riego');
