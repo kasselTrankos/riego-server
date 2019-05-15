@@ -7,13 +7,7 @@
   class Conn {
     private $entityManager;
     public function __construct() {
-      $conn = array(
-        'dbname' => 'riego',
-        'user' => 'riega',
-        'password' => 'mm1144&ppP?',
-        'host' => 'localhost',
-        'driver' => 'pdo_mysql',
-      );
+      $conn = require_once __DIR__.'/../config.php';
       $isDevMode = true;
       $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__.'/../src'),
         $isDevMode, null, null, false);

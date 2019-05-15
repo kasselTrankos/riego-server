@@ -1,4 +1,4 @@
-#SERVER of mine riegos
+# SERVER of mine riegos
 
 Part behind of mine arduino riego system
 
