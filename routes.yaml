@@ -4,4 +4,6 @@ routes:
   index: [/, Api.index, GET]
   api: [/api, Api.api, GET]
   riegos: [/api/riegos, Api.volumen, GET]
-  riegos: [/api/volumen, Api.volumen, GET]
+  volumen: [/api/volumen, Api.volumen, GET]
+  program: [/api/program, Api.program, GET]
+  socket: [/socket, Api.socket, GET]

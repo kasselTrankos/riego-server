@@ -4,6 +4,7 @@
         "doctrine/orm": "^2.5.0",
         "symfony/yaml": "2.*",
         "dannyvankooten/php-router": "dev-master",
+        "sockets/php-stream-socket-server": "^1.4",
         "twig/twig": "^2.0"
     },
     "autoload": {
